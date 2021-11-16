@@ -22,7 +22,7 @@ const LoginScreen = (props) => {
   const loginHandler = (e) => {
     e.preventDefault();
     setloading(true);
-    fetch('http://localhost:5000/users/login', {
+    fetch('https://book-app-back-end.herokuapp.com/users/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

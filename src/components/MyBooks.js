@@ -28,7 +28,7 @@ const MyBooks = () => {
     if (!userInfo) {
       navigate('/login');
     }
-    fetch('http://localhost:5000/books/get')
+    fetch('https://book-app-back-end.herokuapp.com/books/get')
       .then((res) => res.json())
       .then((res) => setbooks(res))
       .catch((err) => console.log('error while getting books', err));
@@ -44,7 +44,7 @@ const MyBooks = () => {
       bookTitle: bookTitle,
       bookDescription: bookDescription,
     };
-    fetch('http://localhost:5000/books/add', {
+    fetch('https://book-app-back-end.herokuapp.com//books/add', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ const MyBooks = () => {
         deleted: true,
       },
     };
-    fetch('http://localhost:5000/books/edit', {
+    fetch('https://book-app-back-end.herokuapp.com//books/edit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

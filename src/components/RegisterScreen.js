@@ -14,7 +14,7 @@ const RegisterScreen = (props) => {
   const registerHandler = (e) => {
     e.preventDefault();
     setloading(true);
-    fetch('http://localhost:5000/users/register', {
+    fetch('https://book-app-back-end.herokuapp.com/users/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
